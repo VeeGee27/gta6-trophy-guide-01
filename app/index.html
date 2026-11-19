@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide &amp; Tracker — all 55 trophies</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div>
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; single-player only</p>
+    <h1>Vice City Trophy Guide</h1>
+    <p class="sub">Every one of the 55 trophies — official name, description and grade, a guide in our own words with its sources, a roadmap to the Platinum, and a tracker that remembers what you have earned. No online trophies. About 200 hours to the Platinum; long, not hard.</p>
+  </div>
+  <div class="progressbox" id="progressbox">
+    <p class="bignum"><span id="earnedCount">0</span><span class="of"> / 55 earned</span></p>
+    <div class="bar" role="progressbar" aria-label="Trophies earned"><div class="fill" id="progressFill" style="width:0%"></div></div>
+    <p class="grades" id="gradeCounts">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</p>
+    <p class="points" id="pointsCount">0 points of 1,350</p>
+  </div>
+</header>
+
+<section class="audit" id="audit">
+  <h2>Audit strip — what this guide checked</h2>
+  <ul>
+    <li><strong>55 / 55</strong> trophy names, descriptions and grades verified against Exophase and PSNProfiles (18 Nov 2026)</li>
+    <li><strong>55 / 55</strong> guides written in our own words, each naming its sources</li>
+    <li><strong>48</strong> guides built from published launch guides &middot; <strong>7</strong> flagged unconfirmed — no method invented for them</li>
+    <li><strong>0</strong> online trophies — all 55 unlock in single-player</li>
+    <li><strong>1</strong> possibly missable trophy flagged (Positive Mental Attitude)</li>
+    <li>Rarity: Exophase launch-day snapshot, 19 Nov 2026 &middot; Last checked 19 Nov 2026</li>
+  </ul>
+</section>
+
+<section class="warning" id="missable-warning">
+  <h2>Read this before you start — one trophy can be missed</h2>
+  <p><strong>Positive Mental Attitude</strong> is the only trophy reported as possibly missable. Lucia&rsquo;s balcony meditation in <strong>Chapter 1</strong> counts toward it and disappears after that chapter. There is <strong>no mission replay</strong> and no New Game Plus, so keep a manual save at the start of every chapter and one untouched save from just before the final mission. Never use cheats on your trophy save — they should switch off trophies and saving.</p>
+</section>
+
+<section class="roadmap" id="roadmap">
+  <h2>Roadmap to the Platinum</h2>
+  <ol class="stages">
+    <li><strong>Stage 1 — Play the story (Chapters 1–5).</strong> Do Lucia&rsquo;s balcony meditation in Chapter 1, keep a manual save at the start of every chapter, and an untouched save before the final mission. Earns the 12 unmissable story trophies — the 4 chapter trophies, 7 mission trophies and the final-mission Gold.</li>
+    <li><strong>Stage 2 — Side stories.</strong> Finish the six stranger finales — Andy, Kenton, Billy, Randy, Tyrone and Bret — plus 8 stranger strands for Strangers &amp; Freaks. Do the time-sensitive Race Against Yago in Chapter 3 the moment it appears.</li>
+    <li><strong>Stage 3 — Partner and robbery tools.</strong> After Breakfast Run (Chapter 2) you can switch partners freely. Get the Snap Gun from Yasmani&rsquo;s Jewelry Jobs (Chapter 3) for Sneakthief, then open bank vaults with That&rsquo;s Where The Money Is (late Chapter 4) for Maximum Withdrawal and Hot Together.</li>
+    <li><strong>Stage 4 — Activities and the long grind.</strong> Shooting Range golds (42), Top Fun drone races (14 locations), 20 race wins, fishing, arcade, all 18 meditation spots, 50 Challenges, 250 stunts — then push on to 300 for the 100% checklist.</li>
+    <li><strong>Stage 5 — Collectibles and money.</strong> 3 card sets, 100 WAiNK locations, 100 vehicles discovered, all 52 areas, 8 garages, $250,000 of Marked Bills laundered, $100,000 spent.</li>
+    <li><strong>Stage 6 — Cleanup and 100%.</strong> After the story, open Progress &gt; Stats &gt; 100% Completion and finish the 35-task checklist (300 stunts, 70 of 80 Challenges, 200 of 277 vehicles, all 8 vaults, all 39 illegal operations). That earns A Long Road — and then the Platinum.</li>
+  </ol>
+  <p class="roadnote">Missable flags are built from the official descriptions: only Positive Mental Attitude is flagged, because it is the only one the launch guides report as possibly missable. Everything else stays available after the credits.</p>
+</section>
+
+<section class="controls" id="controls">
+  <div class="row">
+    <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+    <label>Grade <select id="grade"><option value="all">All grades</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
+    <label>Difficulty <select id="difficulty"><option value="all">Any difficulty</option><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option><option value="very hard">Very hard</option></select></label>
+  </div>
+  <div class="row chips" id="kindChips" role="group" aria-label="Filter by kind">
+    <button type="button" data-kind="all" class="chip on">All 55</button>
+    <button type="button" data-kind="story" class="chip">Story</button>
+    <button type="button" data-kind="missable" class="chip">Missable</button>
+    <button type="button" data-kind="collectibles" class="chip">Collectibles</button>
+    <button type="button" data-kind="activities" class="chip">Activities</button>
+    <button type="button" data-kind="online" class="chip">Online</button>
+  </div>
+  <div class="row toggles">
+    <label class="toggle"><input id="spoilers" type="checkbox" checked> Hide story trophies until earned <span class="hint">(spoiler shield)</span></label>
+    <label class="toggle"><input id="earnedOnly" type="checkbox"> Earned only</label>
+    <span class="spacer"></span>
+    <button id="export" type="button">Export progress</button>
+    <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+    <button id="reset" type="button">Reset</button>
+  </div>
+  <p class="filterNote" id="filterNote"></p>
+</section>
+
+<main>
+  <div id="list" class="list"></div>
+  <p class="empty" id="empty" hidden>No trophies match these filters. Try clearing the search or a filter.</p>
+</main>
+
+<footer class="sources" id="sources">
+  <h2>Sources &amp; honesty notes</h2>
+  <p>Official names, descriptions, grades and secret flags are as PlayStation publishes them, cross-checked between Exophase and PSNProfiles (18 Nov 2026). Every guide above is written in our own words for this entry; each trophy names the sources its facts come from. Rarity figures are Exophase&rsquo;s launch-day snapshot (19 Nov 2026, about 15:00 UTC) — the first hours after launch, not a live rate.</p>
+  <p>Seven trophies are marked <strong>unconfirmed</strong> in their guides: at launch no guide had a verified trigger for them, so only their official description is given, plus what it most likely means. This guide will be corrected as methods are confirmed. GTA VI launched 19 Nov 2026 — detailed guides are still thin, and anything this guide could not verify says so.</p>
+  <ul id="sourceList"></ul>
+  <p class="credit">Grand Theft Auto VI is developed and published by Rockstar Games. This is an unofficial fan-made guide; it uses no Rockstar logo, artwork or game screenshots. Built as an entry for make.fun&rsquo;s GTA 6 trophy guide bounty.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

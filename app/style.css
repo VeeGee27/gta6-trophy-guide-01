@@ -1,0 +1,119 @@
+/* Vice City Trophy Guide — original look: deep teal night, neon pink and sunset
+   orange accents. System fonts only, so the guide works fully offline. */
+:root {
+  --ink: #eef4f3;
+  --muted: #9db8b6;
+  --bg: #0c1a1c;
+  --panel: #122a2d;
+  --panel2: #0f2225;
+  --line: #23484c;
+  --pink: #ff5d8f;
+  --orange: #ff9a3d;
+  --teal: #2dd4c4;
+  --gold: #ffd166;
+  --silver: #cfd8dc;
+  --bronze: #d08a4e;
+  --platinum: #b9f2e8;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  margin: 0; color: var(--ink); background: var(--bg);
+  line-height: 1.5;
+}
+a { color: var(--teal); }
+.masthead {
+  display: flex; gap: 28px; justify-content: space-between; flex-wrap: wrap;
+  padding: 28px 28px 20px;
+  background: linear-gradient(135deg, #142e33 0%, #0c1a1c 55%, #2a1230 100%);
+  border-bottom: 3px solid var(--pink);
+}
+.kicker { color: var(--teal); text-transform: uppercase; letter-spacing: .12em; font-size: 12px; margin: 0 0 6px; }
+h1 { margin: 0 0 8px; font-size: 34px; line-height: 1.1; }
+.sub { max-width: 640px; margin: 0; color: var(--muted); }
+.progressbox { min-width: 260px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; }
+.bignum { font-size: 30px; font-weight: 700; margin: 0; }
+.bignum .of { font-size: 16px; font-weight: 400; color: var(--muted); }
+.bar { height: 10px; background: #081314; border-radius: 5px; overflow: hidden; margin: 10px 0 8px; }
+.bar .fill { height: 100%; background: linear-gradient(90deg, var(--teal), var(--pink)); transition: width .2s; }
+.grades, .points { margin: 2px 0; font-size: 13px; color: var(--muted); }
+.audit { margin: 18px 28px 0; padding: 12px 18px; background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; }
+.audit h2 { margin: 0 0 8px; font-size: 14px; text-transform: uppercase; letter-spacing: .1em; color: var(--teal); }
+.audit ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.audit li { font-size: 13px; color: var(--muted); }
+.audit li strong { color: var(--ink); font-size: 15px; }
+.warning {
+  margin: 18px 28px 0; padding: 14px 18px; border: 1px solid var(--orange);
+  border-left: 6px solid var(--orange); border-radius: 8px; background: #2a1d10;
+}
+.warning h2 { margin: 0 0 6px; font-size: 17px; color: var(--orange); }
+.warning p { margin: 0; }
+.roadmap { margin: 18px 28px 0; padding: 16px 18px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+.roadmap h2 { margin: 0 0 10px; font-size: 20px; }
+.stages { margin: 0; padding-left: 22px; }
+.stages li { margin-bottom: 8px; }
+.stages li strong { color: var(--teal); }
+.roadnote { color: var(--muted); font-size: 13px; margin: 10px 0 0; }
+.controls { margin: 18px 28px 0; padding: 14px 16px; background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; }
+.controls .row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 10px; }
+.controls .row:last-child { margin-bottom: 0; }
+.controls label { font-size: 13px; color: var(--muted); }
+.controls input[type="search"], .controls select {
+  font: inherit; color: var(--ink); background: var(--panel);
+  border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px;
+}
+.controls input[type="search"] { width: 280px; }
+.chip {
+  font: inherit; cursor: pointer; color: var(--ink); background: var(--panel);
+  border: 1px solid var(--line); border-radius: 20px; padding: 5px 13px;
+}
+.chip.on { background: var(--pink); border-color: var(--pink); color: #fff; font-weight: 700; }
+.toggle { display: inline-flex; gap: 6px; align-items: center; }
+.toggle .hint { color: var(--muted); font-size: 12px; }
+.spacer { flex: 1; }
+.controls button { font: inherit; cursor: pointer; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; }
+.controls button:hover, .chip:hover { border-color: var(--teal); }
+.import input { font-size: 12px; }
+.filterNote { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
+.list { margin: 18px 28px; display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px; }
+.card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  padding: 12px 14px; cursor: pointer;
+}
+.card:hover { border-color: var(--teal); }
+.card.earned { border-color: var(--teal); background: #14333a; }
+.card-head { display: flex; gap: 10px; align-items: flex-start; }
+.card input[type="checkbox"] { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--teal); flex: none; cursor: pointer; }
+.card h3 { margin: 0; font-size: 16px; line-height: 1.25; }
+.card .desc { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+.badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.badge {
+  font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  border-radius: 4px; padding: 2px 7px; color: #10181a;
+}
+.badge.platinum { background: var(--platinum); }
+.badge.gold { background: var(--gold); }
+.badge.silver { background: var(--silver); }
+.badge.bronze { background: var(--bronze); color: #fff; }
+.badge.tag { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+.badge.missable { background: var(--orange); color: #201304; }
+.badge.unconfirmed { background: #f4e27a; color: #2a2503; }
+.badge.hidden { background: transparent; color: var(--muted); border: 1px dashed var(--line); }
+.detail { margin-top: 10px; border-top: 1px solid var(--line); padding-top: 10px; font-size: 14px; }
+.detail p { margin: 0 0 8px; }
+.detail .meta { font-size: 12px; color: var(--muted); }
+.detail .sources { font-size: 12px; color: var(--muted); margin: 8px 0 0; }
+.detail .sources a { margin-right: 10px; }
+.detail .guide-label { color: var(--teal); font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+.spoiled h3, .spoiled .desc { color: var(--muted); font-style: italic; }
+.empty { margin: 18px 28px; color: var(--muted); }
+.sources { margin: 8px 28px 28px; padding: 16px 18px; background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; font-size: 14px; }
+.sources h2 { margin: 0 0 8px; font-size: 18px; }
+.sources ul { margin: 10px 0; padding-left: 20px; }
+.sources li { margin-bottom: 4px; }
+.credit { color: var(--muted); font-size: 12px; }
+@media (max-width: 700px) {
+  .masthead, .warning, .roadmap, .controls, .list, .sources { margin-left: 12px; margin-right: 12px; }
+  h1 { font-size: 26px; }
+  .controls input[type="search"] { width: 100%; }
+}
