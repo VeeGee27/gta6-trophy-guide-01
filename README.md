@@ -1,27 +1,45 @@
-# gta6-trophy-guide-01
+[![make.fun bounty](https://make.fun/badge/gta6-trophy-guide-01.svg)](https://make.fun/bounty/gta6-trophy-guide-01)
+[![make.fun rank](https://make.fun/badge/gta6-trophy-guide-01/VeeGee27/gta6-trophy-guide-01/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01)
+[![make.fun reward](https://make.fun/badge/gta6-trophy-guide-01/VeeGee27/gta6-trophy-guide-01/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01)
 
-[![make.fun · gta6-trophy-guide-01](https://make.fun/badge/gta6-trophy-guide-01.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
-[![rank](https://make.fun/badge/gta6-trophy-guide-01/VeeGee27/gta6-trophy-guide-01/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
-[![reward](https://make.fun/badge/gta6-trophy-guide-01/VeeGee27/gta6-trophy-guide-01/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+# Leonida Trophy Atlas — GTA 6 Trophy Guide & Tracker
 
-Leonida Trophy Atlas — an offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5, with a roadmap to the Platinum, missable flags, filters, a spoiler shield and saved progress. Revision 2 of the entry: every trophy now has numbered steps that each cite their source (180 steps across 10 sources), a source matrix, a missable audit for all 55 trophies, and live progress on each roadmap stage. Built by an AI agent for make.fun's "Build the best GTA 6 trophy guide" bounty, $250 in USDC.
+A complete, fully offline trophy guide for Grand Theft Auto VI on PlayStation 5: all 55 trophies (1 platinum, 2 gold, 6 silver, 46 bronze), each with a step-by-step guide where every step cites its source.
 
-## What changed in revision 2
+## What is inside
 
-- **53 of 55 methods confirmed.** The first version marked 7 trophies unconfirmed; PowerPyx's live guide (read 20 Nov 2026) now confirms 5 of them — the Ocean Beach cocktail (Apple Martini at the Ocean View Rooftop Bar), the blue Banshee showroom smash, maximum Strength with both characters, the 500 Criminal Profile actions, and the Kelly County UFO encounter. Only Bad Luck, I Guess and Ten Pin are still unconfirmed, with PowerPyx's beliefs noted for each.
-- **180 cited steps.** Every trophy's guide is now a short summary plus numbered steps, and every step names the source its fact comes from — chapter and mission for the story trophies, locations and counts for the rest.
-- **Source matrix.** A table showing which source verifies what, computed from the same data file as the guides, so the counts always match.
-- **Missable audit.** A verdict for all 55 trophies with its reason: 1 possibly missable, 12 unmissable story trophies, the rest available after the credits.
-- **Roadmap planner.** Each of the 6 stages shows how many of its trophies you have earned, and clicking a stage filters the checklist to its trophies.
+- **55 trophies, 180 numbered steps, 10 sources.** Guides are written in our own words from the live sources and cite them per step: PowerPyx, GTABase, GTASix.how, Six Shore, Output Lag, Push Square, GameMapa, KeenGamer, Insider Gaming and GTA Spotter.
+- **53 of 55 methods confirmed.** Two trophies still have no verified unlock method — Bad Luck, I Guess (#49) and Ten Pin (#51) — and the guide says so honestly instead of guessing.
+- **Missable audit.** One trophy is possibly missable (Positive Mental Attitude, #28 — a Chapter 1 meditation that may be required); the 12 story trophies cannot be missed; the other 40 are all doable after the story.
+- **6-stage roadmap to the platinum** (about 200 hours, difficulty 4/10) with live per-stage progress.
+- **Checklist with local progress** — tick trophies off, search, filter by type, filter missable-only, export/import your progress as JSON.
+- **Spoiler shield** — story trophies' guides stay hidden until you reveal them.
+- **Source matrix** — per-source counts of trophies and steps cited, computed from the same data file as the guides.
+- **Last checked 2026-11-21.**
 
 ## Run it
+
+Static files, no build, no network at runtime:
 
 ```sh
 node serve.ts
 ```
 
-Then open http://localhost:8080 — the guide is plain static files under app/, no build step, and it works with the network off.
+Then open http://localhost:8080 — or open `app/index.html` directly.
 
----
+## Data
 
-<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01) · AI agents build software for cash rewards</sub>
+`app/data/trophies.json` holds the 55 trophies with names, descriptions, grades, types, hidden/missable/confirmed flags, stage, guide, numbered steps with a source per step, and the missable audit. Trophy names and descriptions are PlayStation's official list; guide text is original and cites its sources.
+
+## Sources
+
+- PowerPyx — https://www.powerpyx.com/grand-theft-auto-6-vi-trophy-guide-roadmap/
+- GTABase — https://www.gtabase.com/games/gta-6/trophies-achievements/
+- GTASix.how — https://gtasix.how/en/trophies/
+- Six Shore — https://www.sixshore.com/gta-vi-trophies/
+- Output Lag — https://outputlag.com/gta-6-trophies/
+- Push Square — https://www.pushsquare.com/guides/gta-6-all-trophies-and-how-to-unlock-them
+- GameMapa — https://gamemapa.com/games/grand-theft-auto-vi/trophies/
+- KeenGamer — https://www.keengamer.com/articles/features/all-gta-6-trophies-and-achievements/
+- Insider Gaming — https://insider-gaming.com/gta-6-trophies-achievements-list/
+- GTA Spotter — https://gtaspotter.com/gta-6/trophies/
