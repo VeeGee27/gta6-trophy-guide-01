@@ -3,103 +3,71 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leonida Trophy Atlas — GTA VI guide &amp; tracker, all 55 trophies</title>
+<title>Leonida Trophy Atlas — GTA 6 Trophy Guide &amp; Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="masthead">
-  <div>
-    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; single-player only</p>
-    <h1>Leonida Trophy Atlas</h1>
-    <p class="sub">Every one of the 55 trophies — official name, description and grade, a guide in our own words with 180 numbered steps that each cite their source, a roadmap to the Platinum with live stage progress, a source matrix, a missable audit, and a tracker that remembers what you have earned. No online trophies. About 200 hours to the Platinum; long, not hard.</p>
-  </div>
-  <div class="progressbox" id="progressbox">
-    <p class="bignum"><span id="earnedCount">0</span><span class="of"> / 55 earned</span></p>
-    <div class="bar" role="progressbar" aria-label="Trophies earned"><div class="fill" id="progressFill" style="width:0%"></div></div>
-    <p class="grades" id="gradeCounts">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</p>
-    <p class="points" id="pointsCount">0 points of 1,350</p>
-  </div>
+<header>
+  <h1>Leonida Trophy Atlas</h1>
+  <p class="sub">Every GTA 6 trophy on PlayStation 5 — a cited step-by-step guide for each one, a roadmap to the platinum, and the missables flagged. Fully offline; nothing leaves this page.</p>
+  <dl id="audit-strip" class="strip" aria-label="Guide audit"></dl>
 </header>
 
-<section class="audit" id="audit">
-  <h2>Audit strip — what this guide checked</h2>
-  <ul>
-    <li><strong>55 / 55</strong> trophy names, descriptions and grades verified against Exophase and PSNProfiles (18 Nov 2026), re-checked against PowerPyx and GTABase (20 Nov 2026)</li>
-    <li><strong>53 / 55</strong> methods confirmed &middot; <strong>2</strong> still unconfirmed — no method invented for them</li>
-    <li><strong>180</strong> numbered steps, each citing its source &middot; <strong>10</strong> sources</li>
-    <li><strong>0</strong> online trophies — all 55 unlock in single-player</li>
-    <li><strong>1</strong> possibly missable trophy flagged (Positive Mental Attitude)</li>
-    <li>Difficulty <strong>4 / 10</strong>, about <strong>200 hours</strong> (PowerPyx) &middot; Rarity: Exophase launch-day snapshot, 19 Nov 2026 &middot; Last checked 20 Nov 2026</li>
-  </ul>
+<section class="controls" id="controls" aria-label="Filters">
+  <label class="search">Search <input id="search" type="search" placeholder="Search trophies — try UFO" autocomplete="off"></label>
+  <label>Type
+    <select id="type-filter">
+      <option value="all">All types</option>
+      <option value="story">Story</option>
+      <option value="open-world">Open-world</option>
+      <option value="collectible">Collectible</option>
+      <option value="misc">Miscellaneous</option>
+    </select>
+  </label>
+  <label class="check"><input id="missable-only" type="checkbox"> Missable only</label>
+  <label class="check"><input id="spoiler-toggle" type="checkbox" checked> Spoiler shield — hide story guides</label>
+  <button id="export" type="button">Export progress</button>
+  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+  <button id="clear-filters" type="button">Clear filters</button>
 </section>
 
-<section class="warning" id="missable-warning">
-  <h2>Read this before you start — one trophy can be missed</h2>
-  <p><strong>Positive Mental Attitude</strong> is the only trophy reported as possibly missable. Lucia&rsquo;s balcony meditation in <strong>Chapter 1</strong> counts toward it and disappears after that chapter. Whether that meditation is actually required for the trophy is still unconfirmed — PowerPyx did it and earned the trophy, so do it to be safe. There is <strong>no mission replay</strong> and no New Game Plus, so keep a manual save at the start of every chapter and one untouched save from just before the final mission. Never use cheats on your trophy save — they should switch off trophies and saving.</p>
-</section>
-
-<section class="roadmap" id="roadmap">
-  <h2>Roadmap to the Platinum</h2>
-  <p class="roadintro">Six stages, in order — PowerPyx&rsquo;s three-step shape (story, then the 100% checklist, then cleanup) with the side stories and robbery tools pulled out as their own stages. Each stage shows how many of its trophies you have earned; click &ldquo;Show these trophies&rdquo; to filter the checklist to that stage.</p>
-  <ol class="stages" id="stageList"></ol>
-  <p class="roadnote">Missable flags are built from the official descriptions and PowerPyx&rsquo;s guide (20 Nov 2026): only Positive Mental Attitude is flagged, because it is the only one any launch guide reports as possibly missable. Everything else stays available after the credits — see the missable audit below.</p>
-</section>
-
-<section class="matrix" id="matrix">
-  <h2>Source matrix — which source verifies what</h2>
-  <p>Every step in every guide names its source. The counts below are computed from the same data file as the guides, so they always match. PowerPyx carries most of the methods because it is the one live guide with per-trophy methods as of 20 Nov 2026; the list sources carry the names, descriptions and grades.</p>
-  <table>
-    <thead><tr><th>Source</th><th>What it was used for</th><th>Trophies cited</th><th>Steps cited</th><th>Checked</th></tr></thead>
-    <tbody id="matrixBody"></tbody>
-  </table>
-</section>
-
-<section class="audit-table" id="missable-audit">
-  <h2>Missable audit — all 55 trophies</h2>
-  <p>Every trophy&rsquo;s missable verdict, with its reason. Built from PowerPyx&rsquo;s guide (20 Nov 2026): only one trophy is possibly missable; the 12 story trophies pop automatically; everything else stays available in free-roam after the credits. Quest givers who go quiet during the story come back, fences rotate, and collectibles that sit in story buildings also spawn elsewhere — none of that locks a trophy.</p>
-  <table>
-    <thead><tr><th>Trophy</th><th>Verdict</th><th>Why</th></tr></thead>
-    <tbody id="auditBody"></tbody>
-  </table>
-</section>
-
-<section class="controls" id="controls">
-  <div class="row">
-    <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
-    <label>Grade <select id="grade"><option value="all">All grades</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-    <label>Difficulty <select id="difficulty"><option value="all">Any difficulty</option><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option><option value="very hard">Very hard</option></select></label>
-  </div>
-  <div class="row chips" id="kindChips" role="group" aria-label="Filter by kind">
-    <button type="button" data-kind="all" class="chip on">All 55</button>
-    <button type="button" data-kind="story" class="chip">Story</button>
-    <button type="button" data-kind="missable" class="chip">Missable</button>
-    <button type="button" data-kind="collectibles" class="chip">Collectibles</button>
-    <button type="button" data-kind="activities" class="chip">Activities</button>
-    <button type="button" data-kind="online" class="chip">Online</button>
-  </div>
-  <div class="row toggles">
-    <label class="toggle"><input id="spoilers" type="checkbox" checked> Hide story trophies until earned <span class="hint">(spoiler shield)</span></label>
-    <label class="toggle"><input id="earnedOnly" type="checkbox"> Earned only</label>
-    <span class="spacer"></span>
-    <button id="export" type="button">Export progress</button>
-    <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-    <button id="reset" type="button">Reset</button>
-  </div>
-  <p class="filterNote" id="filterNote"></p>
-</section>
+<p id="progress" aria-live="polite">Showing 55 of 55 trophies · 0 earned</p>
 
 <main>
-  <div id="list" class="list"></div>
-  <p class="empty" id="empty" hidden>No trophies match these filters. Try clearing the search or a filter.</p>
+  <h2>Trophy checklist</h2>
+  <div id="checklist"></div>
 </main>
 
-<footer class="sources" id="sources">
-  <h2>Sources &amp; honesty notes</h2>
-  <p>Official names, descriptions, grades and secret flags are as PlayStation publishes them, cross-checked between Exophase and PSNProfiles (18 Nov 2026) and re-checked against PowerPyx and GTABase (20 Nov 2026). Every guide above is written in our own words for this entry; each step names the source its fact comes from. Rarity figures are Exophase&rsquo;s launch-day snapshot (19 Nov 2026, about 15:00 UTC) — the first hours after launch, not a live rate.</p>
-  <p>Two trophies are marked <strong>unconfirmed</strong> in their guides: at launch no guide had a verified trigger for them, and as of 20 Nov 2026 PowerPyx still lists them as unknown (with a belief for each). This guide will be corrected as methods are confirmed. GTA VI launched 19 Nov 2026 — detailed guides are still thin, and anything this guide could not verify says so.</p>
-  <ul id="sourceList"></ul>
-  <p class="credit">Grand Theft Auto VI is developed and published by Rockstar Games. This is an unofficial fan-made guide; it uses no Rockstar logo, artwork or game screenshots. Built as an entry for make.fun&rsquo;s GTA 6 trophy guide bounty.</p>
+<section id="roadmap" aria-label="Roadmap to the platinum">
+  <h2>Roadmap to the platinum</h2>
+  <p class="hint">Six stages, in the order to play them. Checking a trophy off updates every stage live.</p>
+  <div id="stages"></div>
+</section>
+
+<section id="matrix-section" aria-label="Source matrix">
+  <h2>Source matrix</h2>
+  <p class="hint">Every step in every guide cites its source. The counts below are computed from the same data file as the guides — nothing here is typed by hand.</p>
+  <table id="matrix">
+    <thead><tr><th>Source</th><th>Role</th><th>Trophies cited</th><th>Steps cited</th><th>Checked</th></tr></thead>
+    <tbody id="matrix-rows"></tbody>
+  </table>
+</section>
+
+<section id="audit-section" aria-label="Missable audit">
+  <h2>Missable audit</h2>
+  <p class="hint">One trophy is possibly missable, 12 story trophies cannot be missed, 2 still have no confirmed method, and the other 40 are all doable after the story.</p>
+  <table id="audit">
+    <thead><tr><th>Trophy</th><th>Verdict</th><th>Reason</th></tr></thead>
+    <tbody id="audit-rows"></tbody>
+  </table>
+</section>
+
+<footer id="sources">
+  <h2>Sources</h2>
+  <ol id="source-list"></ol>
+  <p class="fine">Trophy names and descriptions are PlayStation's official list. Guides are written in our own words from the sources above and cite them per step; no guide text is copied. One list source claimed the five vague trophies are all story moments — PowerPyx's specific methods refute that for Personal Best, Actions Speak Louder and The Truth Is Out There; the dispute stays open on Bad Luck, I Guess. Last checked 2026-11-21.</p>
 </footer>
+
 <script type="module" src="app.js"></script>
 </body>
 </html>
